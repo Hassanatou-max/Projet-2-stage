@@ -1,0 +1,604 @@
+:root {
+  --bg-color: #121212;
+  --card-bg: #1e1e1e;
+  --text-main: #ffffff;
+  --text-muted: #a0a0a0;
+  --accent-neon: #a3e635; /* Vert néon style Spotify/Figma */
+  --accent-neon-hover: #84cc16;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color:black; 
+  color: var(--text-main);
+  line-height: 1.6;
+  padding: 0 5%;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.logo {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--text-main);
+}
+
+/* Section Hero & About */
+.hero-section, .about-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  padding: 4rem 0;
+  padding-top: 50px;
+}
+
+.hero-text h1, .about-header h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  margin-top: 20px;
+}
+
+.hero-image img, .about-image img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Boutons */
+.cta-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 50px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.8rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: background 0.3s;
+}
+
+.btn-primary {
+  background-color: var(--accent-neon);
+  color: #000000;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-neon-hover);
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--card-bg);
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+/* Projets */
+.projects-section, .details-section {
+  padding: 4rem 0;
+}
+
+.projects-section h2, .details-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+}
+
+.project-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 60px;
+  align-items: start;
+}
+
+.project-img {
+  flex: 1;
+}
+
+.project-img img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.project-info h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.link-btn {
+  color: var(--accent-neon);
+  text-decoration: none;
+  font-weight: 600;
+}
+.project-desc {
+  color: #a0a0a0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* SECTION INFORMATIONS SUR LE PROJET */
+.project-meta {
+  border-top: 1px dashed #333333;
+  border-bottom: 1px dashed #333333;
+  padding: 15px 0;
+  margin-bottom: 25px;
+}
+
+.meta-title {
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  color: #ffffff;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.meta-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #a0a0a0;
+  margin-bottom: 8px;
+}
+
+.meta-row span:last-child {
+  color: #ffffff; /* Valeur à droite en blanc */
+}
+
+/* LIENS DEMO ET GITHUB */
+.project-links {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.project-links a {
+  font-size: 0.85rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding-bottom: 3px;
+}
+
+/* Style lien DÉMO avec soulignement vert néon */
+.link-demo {
+  color: #d4f82a; /* Vert néon */
+  border-bottom: 2px solid #d4f82a;
+}
+
+.link-demo i {
+  font-size: 0.8rem;
+}
+
+/* Style lien GITHUB avec soulignement vert néon */
+.link-github {
+  color: #d4f82a; /* Vert néon */
+  border-bottom: 2px solid #d4f82a;
+}
+
+.link-github i {
+  font-size: 1rem;
+}
+project-links a:hover {
+  opacity: 0.8;
+}
+
+/* --- SECTION À PROPOS DE MOI--- */
+.about-section {
+  max-width: 1000px;
+  margin: 0 auto 60px auto;
+  display: flex;
+  flex-direction: column; /* Force l'image à se placer sous le texte */
+  gap: 30px;
+}
+
+.about-top {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Titre à gauche, texte à droite */
+  gap: 30px;
+  align-items: start;
+}
+
+/* Diminuer la taille du titre "À PROPOS DE MOI" */
+.about-top .section-title {
+  font-size: 1.8rem; /* Taille réduite */
+  font-weight: 800;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.about-text .subtitle {
+  font-weight: bold;
+  font-size: 1.05rem;
+  margin-top: 0;
+  color: #ffffff;
+}
+
+.about-text .description {
+  color: #a0a0a0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 15px 0;
+}
+
+/* Alignement du bouton CV et des icônes */
+.about-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.btn-cv {
+  background-color: #d4f82a; /* Couleur vert néon */
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.85rem;
+  padding: 10px 22px;
+  border-radius: 25px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.2s ease;
+}
+
+.btn-cv:hover {
+  transform: translateY(-2px);
+}
+
+.social-icons-row {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons-row a {
+  color: #ffffff;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-icons-row a:hover {
+  color: #d4f82a;
+}
+
+/* Conteneur de l'image centrée sous le texte */
+.about-image-container {
+  width: 100%;
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.about-img {
+  width: 100%;
+  max-width: 500px; /* Ajuste la largeur de la photo */
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* --- SECTION MES COMPÉTENCES --- */
+/* Style global de la section */
+.skills-section {
+  background-color: #0f1015; /* Fond sombre comme sur la photo */
+  color: #ffffff;
+  padding: 80px 10%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+/* Colonne Gauche : Grand titre en majuscules */
+.skills-left {
+  flex-shrink: 0;
+}
+
+.skills-left h2 {
+  white-space: nowrap;
+  font-size: 3rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.1;
+  color: #ffffff;
+}
+
+/* Colonne Droite : Description & Badges */
+.skills-right {
+  flex: 1.5;
+}
+
+.skills-description {
+  font-size: 0.95rem;
+  color: #a0a5b5; /* Couleur gris clair pour le texte */
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+/* Grille des badges */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* Style de chaque compétence entourée */
+.skill-card {
+  background-color: transparent; /* Fond transparent */
+  border: 1px solid #2d313e;     /* Bordure fine */
+  color: #ffffff;                 /* Texte blanc */
+  padding: 10px 24px;             /* Espace intérieur */
+  border-radius: 50px;            /* Rends les côtés totalement arrondis en pilule */
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+/* Effet au survol (optionnel) */
+.skill-card:hover {
+  border-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Effet survol (Hover) optionnel mais élégant */
+.skill-card:hover {
+  border-color: #a3e635; /* Changement de couleur au survol (vert néon) */
+  color: #a3e635;
+  transform: translateY(-2px);
+}
+
+/* Adaptation Mobile / Écrans réduits */
+@media (max-width: 768px) {
+  .skills-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .skills-left h2 {
+    font-size: 2.2rem;
+  }
+}
+/* --- SECTION ENTRONS EN CONTACT --- */
+.contact-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.contact-desc {
+  color: var(--text-gray);
+  font-size: 0.9rem;
+}
+
+.contact-socials {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.contact-socials a {
+  color: var(--text-white);
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: color 0.3s;
+ 
+}
+
+.contact-socials a:hover {
+  color: var(--accent-color);
+}
+/* 1. Conteneur principal */
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  gap: 80px; /* Grand espace entre le texte et le formulaire */
+}
+
+/* 2. Colonne de gauche (Texte) : Largeur fixe réduite */
+.contact-info {
+  flex: 0 0 320px; /* Force la colonne de gauche à garder 320px sans écraser le reste */
+}
+
+.contact-info h2 {
+  white-space: nowrap; /* Garde ENTRONS EN CONTACT sur une seule ligne */
+}
+
+/* 3. Formulaire (Droite) : Prend tout l'espace disponible */
+.contact-form {
+  flex: 1; /* S'étire pour occuper tout le reste du conteneur à droite */
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+}
+
+/* 4. Alignement des champs et allongement des traits */
+.contact-form input,
+.contact-form textarea {
+    width: 100% !important;   /* Force le trait à prendre toute la largeur disponible */
+    min-width: 500px;         /* Définit une longueur minimale très large pour le trait */
+    box-sizing: border-box;
+    display: block;
+}
+.form-group {
+  width: 100%;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100% !important;
+  display: block;
+  box-sizing: border-box;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 12px 0;
+  color: #ffffff;
+  font-size: 0.95rem;
+  outline: none;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--accent-color, #a3e635);
+}
+
+.btn-submit {
+  background-color: var(--accent-color);
+  color: #000;
+  border: none;
+  padding: 12px 35px;
+  border-radius: 50px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  align-self: flex-end;
+  margin-top: 10px;
+}
+
+
+.btn-submit:hover {
+  background-color: #00888e; /* Teinte un peu plus foncée au survol */
+  transform: translateY(-2px);
+  opacity: 0.9s;
+}
+
+.btn-submit:active {
+  transform: translateY(0);
+}
+ /* --- COULEURS SECTION CONTACT --- */
+
+/* 1. Icônes des réseaux sociaux en jaune/vert néon */
+.contact-socials a {
+  color: #d4f82a; /* Remplace le blanc par le jaune/vert néon */
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.contact-socials a:hover {
+  opacity: 0.8;
+}
+
+/* 2. Bouton Envoyer en jaune/vert néon avec texte noir */
+.btn-submit {
+  background-color: #d4f82a; /* Remplace le bleu par le jaune/vert néon */
+  color: #000000;             /* Texte noir pour un bon contraste */
+  padding: 10px 25px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  margin-top: 15px;
+}
+
+.btn-submit:hover {
+  background-color: #c2e622; /* Teinte légèrement plus foncée au survol */
+  transform: translateY(-2px);
+}
+
+/* Container global des informations du projet */
+.project-info {
+  border-top: 1px solid #333333; /* Ligne tout en haut, au-dessus de "Année" */
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Chaque ligne (Année, Rôle, etc.) */
+.project-info-row {
+  display: flex;
+  justify-content: space-between; /* Aligne l'étiquette à gauche et la valeur à droite */
+  align-items: center;
+  padding: 12px 0; /* Espace vertical */
+  border-bottom: 1px solid #333333; /* Ligne sous "Année" ET sous "Rôle" */
+}
+
+.project-info-row .label {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.project-info-row .value {
+  color: #a0a0a0;
+}
+.vue{
+  color: #c2e622;
+}
+.p{
+  background-color: #000;
+}
+
+  .v{
+    background-color: #000;
+    color: #a0a0a0;
+  }
+ 
